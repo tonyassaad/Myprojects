@@ -1,0 +1,290 @@
+.nav-header, .navbar-form-custom /* the search field in the header*/, .breadcrumb, .dataTables_length, .html5buttons {
+	display: none !important;
+}
+#account_list_rows i {
+	font-size: 28px;
+	text-align: center;
+}
+.profile-info i {
+	font-size: 18px;
+	padding: 0 7px 0 0;
+	color: #1ab394;
+}
+.margin_zero {
+	margin: 0;
+}
+.padding_zero {
+	padding: 0;
+}
+.blue-bg a {
+	color: #FFF;
+}
+.float-right {
+	float: right !important;
+}
+.slick_demo_2 .payment-card {
+	margin: 0 10px;
+}
+.tabs-container .ibox-content {
+	padding: 20px 0 0 0;
+}
+.custom .invoice-total > tbody > tr > td:first-child {
+	text-align: left;
+	width: 35%;
+}
+.custom .invoice-total > tbody > tr > td:last-child {
+	width: auto;
+}
+.custom table.invoice-total {
+	width: 562px;
+}
+.status-title {
+	border-radius: 50px;
+	color: #FFF;
+	padding: 6px 12px;
+	margin-bottom: 40px;
+}
+.status-title.approved {
+	background: #1ab394;
+}
+.status-title.declined {
+	background: #ed5565;
+}
+.status-title.dispute {
+	background: #1c84c6
+}
+/*.sorting_1 {
+	text-align: center;
+}*/
+#account_list_datatable_wrapper .row .col-sm-6 {
+	width: 100% !important;
+}
+.dataTables_info {
+	display: none;
+}
+.glyphicon {
+	left: 133px;
+	top: -24px;
+}
+.addnotes label, .addnotes textarea {
+	display: block;
+}
+.addnotes textarea {
+	width: 100%;
+}
+/* iCheck plugin Square skin, green
+----------------------------------- */
+.icheckbox_square-green, .iradio_square-green {
+	display: inline-block;
+ *display: inline;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	width: 22px;
+	height: 22px;
+	background: url(../img/green.png) no-repeat;
+	border: none;
+	cursor: pointer;
+}
+.icheckbox_square-green {
+	background-position: 0 0;
+}
+.icheckbox_square-green.hover {
+	background-position: -24px 0;
+}
+.icheckbox_square-green.checked {
+	background-position: -48px 0;
+}
+.icheckbox_square-green.disabled {
+	background-position: -72px 0;
+	cursor: default;
+}
+.icheckbox_square-green.checked.disabled {
+	background-position: -96px 0;
+}
+.iradio_square-green {
+	background-position: -120px 0;
+}
+.iradio_square-green.hover {
+	background-position: -144px 0;
+}
+.iradio_square-green.checked {
+	background-position: -168px 0;
+}
+.iradio_square-green.disabled {
+	background-position: -192px 0;
+	cursor: default;
+}
+.iradio_square-green.checked.disabled {
+	background-position: -216px 0;
+}
+
+/* HiDPI support */
+@media (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+ .icheckbox_square-green,  .iradio_square-green {
+ background-image: url(../img/green@2x.png);
+ -webkit-background-size: 240px 24px;
+ background-size: 240px 24px;
+}
+}
+#roles_permissions label {
+	cursor: pointer;
+	font-weight: normal;
+}
+.note_notification {
+	width: 10px;
+	height: 10px;
+	background: #ff0000;
+	border-radius: 100%;
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+}
+#account_profile_transactions td {
+	position: relative;
+}
+#account_list_rows i {
+	font-size: 12px;
+	color: #f9b66d;
+}
+.btn-group {
+	position: relative;
+}
+.btn-group #action_account_block_Loader {
+	position: absolute;
+	right: -45px;
+	top: -12px;
+}
+.testpaul {
+	color: #FF0000;
+}
+.success_message {
+	display: none;
+}
+.col-md-2 .widget{
+	margin:0;
+	}
+.pos_rel{
+	position:relative;
+	}
+.absolute{position:absolute;}
+
+button.absolute{
+	right:0;
+	top:0;
+	}
+.profile-info .badge {
+	padding:7px 12px;
+	}
+.badge i{
+	font-size:14px;
+	color:#FFFFFF;
+	padding:0 0 0 4px;
+	font-weight:100;
+	}
+.profile-image i.absolute{
+	left:0;
+	top:0;
+	color:#FFF;
+	font-size:15px;
+	background:#036;
+	padding:8px;
+	border-radius:100%;
+	border:3px solid #FFF;
+	}
+.support{color:#f8ac59;}
+.sales{color:#669;}
+.marketing{color:#1c84c6;}
+.manager{color:#636363;}
+.development{color:#23c6c8;;}
+.systems{color:#b05ae8;}
+.hr{color:#F99;}
+.qa{color:#0CF;}
+.finance{color:#1ab394;}
+
+.bg_support{background:#f8ac59;}
+.bg_sales{background:#669;}
+.bg_marketing{background:#1c84c6;}
+.bg_manager{background:#636363;}
+.bg_development{background:#23c6c8;;}
+.bg_systems{background:#b05ae8;}
+.bg_hr{background:#F99;}
+.bg_qa{background:#0CF;}
+.bg_finance, .role_details .success{background:#1ab394;}
+
+.roles_listing .ibox-content i{
+	font-size:45px;
+	}
+
+.modal-header .success{color:#1ab394;}
+
+.role_details label{font-size:12px; font-weight:normal;}
+.role_details .modal-header h4,
+.role_details .modal-header .support,
+.role_details .modal-header .sales,
+.role_details .modal-header .marketing,
+.role_details .modal-header .manager,
+.role_details .modal-header .development,
+.role_details .modal-header .systems,
+.role_details .modal-header .hr,
+.role_details .modal-header .qa,
+.role_details .modal-header .finance,
+.role_details .success{
+	color:#FFFFFF;
+	}
+.role_details .success{
+	padding:0 10px;
+	border-radius:10px;
+	}
+/******************************** Admin Group colors **********************/
+.badge.defaultColor{background:#636363;}
+.badge.yellowColor{background:#f8ac59;}
+.badge.greenColor{background:#1ab394;}
+.badge.darkblueColor{background:#1c84c6;}
+.badge.pinkColor{background:#F99;}
+.badge.darkpurpleColor{background:#669;}
+.badge.lightgreenColor{background:#23c6c8;}
+.badge.lightpurpleColor{background:#b05ae8;}
+.badge.lightblueColor{background:#0CF;}
+
+        
+.defaultColor i{color:#636363;}
+.yellowColor i{color:#f8ac59;}
+.greenColor i{color:#1ab394;}
+.darkblueColor i{color:#1c84c6;}
+.pinkColor i{color:#F99;}
+.darkpurpleColor i{color:#669;}
+.lightgreenColor i{color:#23c6c8;}
+.lightpurpleColor i{color:#b05ae8;}
+.lightblueColor i{color:#0CF;}  
+        
+.colors span.badge{display:inline-block; width:30px; height:30px; border-radius:50%;}
+.select_icon i{font-size:55px; display:block; padding:15px;}
+.select_icon .col-md-2{text-align:center;}
+  
+.roles_matrix tr{
+	-webkit-transition: all 200ms ease-out;
+	-moz-transition: all 200ms ease-out;
+	-ms-transition: all 200ms ease-out;
+	-o-transition: all 200ms ease-out;
+	transition: all 200ms ease-out;
+}
+.roles_matrix td, .roles_matrix th{text-align:center;}
+.roles_matrix tr td:first-child{text-align:left;}
+
+.roles_matrix tr:hover{background:#f4f5c6 !important;}
+.roles_matrix tr td:first-child{
+	width:250px;
+	}
+
+
+
+
+
+
+
+
+
+
+
