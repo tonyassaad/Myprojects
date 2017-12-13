@@ -36,3 +36,6 @@ Route::group(['prefix' => 'page'], function() {
             'uses' => '\App\Http\Controllers\CrudController@createPage']
     );
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

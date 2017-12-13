@@ -64,11 +64,11 @@ class CrudController extends Controller {
             $domain->name = $request->input('name');
             $domain->link = $request->input('link');
             $domain->language = $request->input('language');
-             
+
             $domain->long = $this->getGoogleLocationApi($request->input('location'))['lng'];
             $domain->lat = $this->getGoogleLocationApi($request->input('location'))['lat'];
             print_r($domain);
-           
+
             $domain->save();
             return response()->json(['response' => ['success' => 'Successfully saved']]);
         } catch (QueryException $ex) {
@@ -108,8 +108,6 @@ class CrudController extends Controller {
         }
     }
 
-  
-
     public function getGoogleLocationApi($location) {
         $client = new Client();
         ///call google ap
@@ -122,9 +120,23 @@ class CrudController extends Controller {
         }
         return $location;
     }
-  //Dispatch the job pushDuepages
+
+    /* Assume we have the interface for deleting since i did not have time to create them */
+
+    public function deleteDomain(Request $request) {
+        $domain = Domain::find($request->input('domain_id'));
+        $domain->delete();
+    }
+
+    public function deletePage(Request $request) {
+        $page = pages::find($request->input('page_id'));
+        $page->delete();
+    }
+
+    //Dispatch the job pushDuepages
     public function store(Request $request) {
         // Create podcast....
         posts::dispatch($post)->onQueue('processing');
     }
+
 }

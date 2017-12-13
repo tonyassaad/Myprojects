@@ -33,20 +33,22 @@ class DuePages extends Command {
         parent::__construct();
     }
 
-    /**
+    /*     * scheduled command that will check every minute for the dues pages.
      * Execute the console command.
      *
      * @return mixed$
      */
+
     public function handle(Client $client) {
         $duepages = \DB::table('pages')
                 ->where('next_visit_time', '<', Carbon::now());
         foreach ($duepages->get() as $page) {
-            $crawler = $client->request('GET', 'http://www.symfony.com/blog/');
+           // $crawler = $client->request('GET', 'http://www.symfony.com/blog/');
+            $crawler = $client->request('GET', $page->link);
             //area
             $pageid = $page->id;
-            $links = $crawler->selectLink('Security Advisories')->link();
-
+            $links = $crawler->selectLink($page->area)->link();
+            /* Extract the links from the specified section that i set it harcoded */
             $crawler = $client->click($links);
             $post_data['post_title'] = ($links->getNode()->nodeValue);
 
@@ -55,6 +57,7 @@ class DuePages extends Command {
 //                var_dump($node->image()) . "\n";
             });
 
+            /*save the crawler data to Post model*/
             $crawler->filter('div > p')->each(function ($nodes, $pageid) {
                 foreach ($nodes as $node) {
                     $post_data['post_title'] = trim($node->nodeValue);
@@ -73,9 +76,6 @@ class DuePages extends Command {
                     ->where('id', 4)
                     ->update(['last_visit_time' => Carbon::now()]);
             $this->info('table Updated Successfully!');
-
-
-            ///- Push each Post Model to a redis queue called posts
         }
     }
 
